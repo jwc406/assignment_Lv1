@@ -8,46 +8,119 @@
   min-width: 800px;
   height: 100vh;
   margin: 0 auto;
-  background-color: aliceblue;
 }
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: var(--padding);
-  border: 1px solid gray;
-  border-radius: 1rem;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: var(--padding);
+  padding: 2rem 3rem;
   border-radius: 1rem;
-  background: gray;
 }
 
 .inputBox {
   display: flex;
+  gap: 0.5rem;
 }
 
 .inputBox input {
   height: 2rem;
-  border-radius: 0.5rem;
   margin: 0 1rem;
+  background: none;
+  padding: 1.2rem 1rem;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+input:focus {
+  outline-style: none;
+  border-bottom: 2px solid #84fab0;
 }
 
 button {
   width: 10rem;
   height: 2rem;
   border-radius: 0.5rem;
+  border: none;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav button {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+nav button:active {
+  background-image: linear-gradient(120deg, #8fd3f4 0%, #84fab0 100%);
 }
 
 main {
-  padding: var(--padding);
+  width: 100%;
+  padding: 0 3rem;
+  padding-bottom: 2rem;
 }
 
-main p {
+main > p {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+main > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.todoBox {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.todoBox p {
+  margin: 0;
+}
+
+.todoBox p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttons button {
+  color: white;
+}
+
+.buttons button:first-child {
+  background: linear-gradient(145deg, #ff7a7a, #e64e4e);
+}
+
+.buttons button:first-child:active {
+  background: linear-gradient(145deg, #e64e4e, #ff5d5d);
+}
+
+.buttons button:last-child {
+  background: linear-gradient(145deg, #829dff, #4e6ce6);
+}
+
+.buttons button:last-child:active {
+  background: linear-gradient(145deg, #4661cf, #5374f6);
 }

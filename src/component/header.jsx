@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <p>My Todo List</p>
+      <h2>My Todo List</h2>
       <p>React</p>
     </header>
   );
