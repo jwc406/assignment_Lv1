@@ -45,7 +45,7 @@ input:focus {
 }
 
 button {
-  width: 10rem;
+  width: 6rem;
   height: 2rem;
   border-radius: 0.5rem;
   border: none;
@@ -53,6 +53,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 nav button {
@@ -75,14 +76,15 @@ main > p {
 }
 
 main > div {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
 }
 
 .todoBox {
   display: flex;
-  width: 30%;
+  width: 100%;
   flex-direction: column;
   gap: 1.5rem;
   background: linear-gradient(145deg, #f1f1f1, #ffffff);
@@ -102,6 +104,7 @@ main > div {
 
 .buttons {
   display: flex;
+  justify-content: stretch;
   gap: 0.5rem;
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoForm(props) {
+function TodoForm({ todos, setTodos }) {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
@@ -16,14 +16,14 @@ function TodoForm(props) {
 
   const clickAddButtonHandler = () => {
     const newTodo = {
-      id: props.todos.length + 1,
+      id: todos.length + 1,
       isDone: false,
       title,
       desc,
     };
     if (title === "" || desc === "") alert("모두 입력하세요!");
     else {
-      props.setTodos([...props.todos, newTodo]);
+      setTodos([...todos, newTodo]);
       setTitle("");
       setDesc("");
     }
