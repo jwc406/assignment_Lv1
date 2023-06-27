@@ -1,11 +1,11 @@
-function Todos({ todos, setTodos, todo }) {
+function Todo({ todos, setTodos, todo }) {
   const clickDeleteButtonHandler = (id) => {
-    const newTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(newTodos);
+    const deletedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(deletedTodos);
   };
 
   const clickDoneButtonHandler = (id) => {
-    const updateTodos = todos.map((todo) => {
+    const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
           ...todo,
@@ -14,7 +14,7 @@ function Todos({ todos, setTodos, todo }) {
       }
       return todo;
     });
-    setTodos(updateTodos);
+    setTodos(updatedTodos);
   };
 
   return (
@@ -33,4 +33,4 @@ function Todos({ todos, setTodos, todo }) {
   );
 }
 
-export default Todos;
+export default Todo;

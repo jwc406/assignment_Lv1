@@ -2,16 +2,16 @@ import React, { useState } from "react";
 
 function TodoForm({ todos, setTodos }) {
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [content, setContent] = useState("");
 
   const onTitleChangeHandler = (event) => {
     const newTitle = event.target.value;
     setTitle(newTitle);
   };
 
-  const onDescChangeHandler = (event) => {
-    const newDesc = event.target.value;
-    setDesc(newDesc);
+  const oncontentChangeHandler = (event) => {
+    const newContent = event.target.value;
+    setContent(newContent);
   };
 
   const clickAddButtonHandler = () => {
@@ -19,13 +19,14 @@ function TodoForm({ todos, setTodos }) {
       id: todos.length + 1,
       isDone: false,
       title,
-      desc,
+      content,
     };
-    if (title === "" || desc === "") alert("모두 입력하세요!");
+
+    if (title === "" || content === "") alert("모두 입력하세요!");
     else {
       setTodos([...todos, newTodo]);
       setTitle("");
-      setDesc("");
+      setContent("");
     }
   };
 
@@ -38,7 +39,11 @@ function TodoForm({ todos, setTodos }) {
         </div>
         <div>
           <span>내용</span>
-          <input type="text" onChange={onDescChangeHandler} value={desc} />
+          <input
+            type="text"
+            onChange={oncontentChangeHandler}
+            value={content}
+          />
         </div>
       </div>
       <button onClick={clickAddButtonHandler}>추가하기</button>
