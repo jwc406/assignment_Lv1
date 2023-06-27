@@ -78,7 +78,7 @@ main > p {
 main > div {
   width: 100%;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(3, minmax(max-content, 1fr));
 }
 
@@ -106,9 +106,12 @@ main > div {
   display: flex;
   justify-content: stretch;
   gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .buttons button {
+  flex: 1;
   color: white;
 }
 
