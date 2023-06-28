@@ -20,7 +20,7 @@ function Todo({ todos, setTodos, todo }) {
   return (
     <div className="todoBox">
       <p>{todo.title}</p>
-      <p>{todo.desc}</p>
+      <p>{todo.content}</p>
       <div className="buttons">
         <button onClick={() => clickDeleteButtonHandler(todo.id)}>
           삭제하기

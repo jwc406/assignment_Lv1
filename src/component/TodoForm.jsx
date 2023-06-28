@@ -9,7 +9,7 @@ function TodoForm({ todos, setTodos }) {
     setTitle(newTitle);
   };
 
-  const oncontentChangeHandler = (event) => {
+  const onContentChangeHandler = (event) => {
     const newContent = event.target.value;
     setContent(newContent);
   };
@@ -41,7 +41,7 @@ function TodoForm({ todos, setTodos }) {
           <span>내용</span>
           <input
             type="text"
-            onChange={oncontentChangeHandler}
+            onChange={onContentChangeHandler}
             value={content}
           />
         </div>

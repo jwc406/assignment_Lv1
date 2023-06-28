@@ -11,13 +11,13 @@ function App() {
       id: 1,
       isDone: false,
       title: "리액트 공부하기",
-      desc: "리액트 기초 강의 듣기",
+      content: "리액트 기초 강의 듣기",
     },
     {
       id: 2,
       isDone: true,
       title: "TIL 작성하기",
-      desc: "오늘 한 것 정리해보기",
+      content: "오늘 한 것 정리해보기",
     },
   ]);
 
